@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rock Universe</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="navbar">
+    <div class="logo">🎸 ROCK UNIVERSE</div>
+    <ul class="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#bandas">Bandas</a></li>
+    <li><a href="#galeria">Galería</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+    <h1>EL ROCK <span>NUNCA MUERE</span></h1>
+    <p id="mensaje-bienvenida">Bienvenido al templo del rock. Siente la energía.</p>
+    <button class="btn" id="btn-bienvenida">¡Mostrar mensaje!</button>
+</section>
+
+<!-- BANDAS -->
+<section class="seccion" id="bandas">
+    <h2 class="titulo-seccion">Bandas Legendarias</h2>
+    <div class="grid-bandas">
+
+    <div class="tarjeta">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Beatles_ad_1965_just_the_beatles_crop.jpg/250px-Beatles_ad_1965_just_the_beatles_crop.jpg" alt="The Beatles" />
+        <h3>The Beatles</h3>
+        <p>Los cuatro de Liverpool que cambiaron la música para siempre.</p>
+    </div>
+
+    <div class="tarjeta">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Metallica_at_The_O2_Arena_London_2008.jpg/250px-Metallica_at_The_O2_Arena_London_2008.jpg" alt="Metallica" />
+        <h3>Metallica</h3>
+        <p>El poder del metal que retumba en estadios del mundo entero.</p>
+    </div>
+
+    <div class="tarjeta">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Nirvana_around_1992.jpg/250px-Nirvana_around_1992.jpg" alt="Nirvana" />
+        <h3>Nirvana</h3>
+        <p>El grunge que definió una generación con tres acordes.</p>
+    </div>
+
+    </div>
+</section>
+
+<!-- INTERACTIVIDAD JS -->
+<section class="seccion" id="interactivo">
+    <h2 class="titulo-seccion">¿Cuál es tu estilo?</h2>
+    <p id="texto-dinamico">Haz clic para descubrir tu estilo de rock.</p>
+    <div class="btn-grupo">
+    <button class="btn btn-rock" data-estilo="Classic Rock 🎸">Classic Rock</button>
+    <button class="btn btn-rock" data-estilo="Heavy Metal 🤘">Heavy Metal</button>
+    <button class="btn btn-rock" data-estilo="Punk Rock 🔥">Punk Rock</button>
+    <button class="btn btn-rock" data-estilo="Grunge 💀">Grunge</button>
+    </div>
+    <div id="contenido-extra" class="oculto">
+    <p>🎶 El rock es más que música — ¡es una forma de vida!</p>
+    </div>
+    <button class="btn btn-secundario" id="btn-toggle">Ver más info</button>
+</section>
+
+<!-- GALERÍA -->
+<section class="seccion" id="galeria">
+    <h2 class="titulo-seccion">Galería Rock</h2>
+    <div class="grid-galeria">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Guitar_player_%28Unsplash%29.jpg/320px-Guitar_player_%28Unsplash%29.jpg" alt="Guitarrista" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Drums_at_concert.jpg/320px-Drums_at_concert.jpg" alt="Batería" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Rock_concert_in_black_and_white.jpg/320px-Rock_concert_in_black_and_white.jpg" alt="Concierto" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Gatto_europeo4.jpg/320px-Gatto_europeo4.jpg" alt="Rock crowd" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Camponotus_flavomarginatus_ant.jpg/320px-Camponotus_flavomarginatus_ant.jpg" alt="Stage" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Simple_guitar.jpg/320px-Simple_guitar.jpg" alt="Guitarra" />
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<footer class="footer" id="contacto">
+    <p>🎸 Rock Universe — Hecho con pasión y volumen al máximo</p>
+    <p>© 2025 Todos los derechos reservados</p>
+</footer>
+
+<!-- Script al final del body -->
+<script src="script.js"></script>
+</body>
+</html>

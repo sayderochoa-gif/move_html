@@ -1,0 +1,317 @@
+/* ============================================
+   VARIABLES GLOBALES (TASK 4)
+   ============================================ */
+:root {
+  --color-fondo: #0a0a0a;
+  --color-primario: #e8002d;
+  --color-acento: #ff6b00;
+  --color-texto: #f0f0f0;
+  --color-gris: #1e1e1e;
+  --color-borde: #333;
+  --fuente-titulo: 'Bebas Neue', cursive;
+  --fuente-cuerpo: 'Barlow', sans-serif;
+  --radio: 8px;
+  --sombra: 0 4px 20px rgba(232, 0, 45, 0.3);
+}
+
+/* ============================================
+   RESET Y BASE
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: 1rem;  /* unidad relativa (TASK 3) */
+  line-height: 1.6;
+}
+
+/* ============================================
+   NAVEGACIÓN
+   ============================================ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #111;
+  border-bottom: 2px solid var(--color-primario);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.8rem;
+  color: var(--color-primario);
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--color-texto);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--color-primario);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 50%, #0a0a0a 100%);
+  border-bottom: 2px solid var(--color-borde);
+}
+
+.hero h1 {
+  font-family: var(--fuente-titulo);
+  font-size: 5rem;       /* rem = relativo (TASK 3) */
+  letter-spacing: 4px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.hero h1 span {
+  color: var(--color-primario);
+  display: block;
+  font-size: 6rem;
+  text-shadow: 0 0 20px var(--color-primario);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  color: #aaa;
+}
+
+/* ============================================
+   BOTONES (agrupados — TASK 4)
+   ============================================ */
+.btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: var(--radio);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra);
+}
+
+/* Botón principal */
+#btn-bienvenida,
+.btn-rock {
+  background-color: var(--color-primario);
+  color: #fff;
+}
+
+/* Botón secundario */
+.btn-secundario {
+  background-color: transparent;
+  color: var(--color-acento);
+  border: 2px solid var(--color-acento);
+  margin-top: 1rem;
+}
+
+.btn-secundario:hover {
+  background-color: var(--color-acento);
+  color: #000;
+}
+
+/* ============================================
+   SECCIONES GENERALES
+   ============================================ */
+.seccion {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.titulo-seccion {
+  font-family: var(--fuente-titulo);
+  font-size: 3rem;
+  color: var(--color-primario);
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   GRID BANDAS (TASK 2 — escritorio: 3 columnas)
+   ============================================ */
+.grid-bandas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Tarjetas (reglas agrupadas — TASK 4) */
+.tarjeta {
+  background-color: var(--color-gris);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra);
+}
+
+.tarjeta img {
+  width: 100%;
+  max-width: 100%;    /* TASK 3 */
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjeta h3 {
+  font-family: var(--fuente-titulo);
+  font-size: 1.6rem;
+  color: var(--color-primario);
+  padding: 0.75rem 0 0.25rem;
+}
+
+.tarjeta p {
+  font-size: 0.95rem;
+  color: #bbb;
+  padding: 0 1rem 1rem;
+}
+
+/* ============================================
+   SECCIÓN INTERACTIVA
+   ============================================ */
+#interactivo {
+  text-align: center;
+  background-color: #0f0f0f;
+  max-width: 100%;
+  border-top: 1px solid var(--color-borde);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+#texto-dinamico {
+  font-size: 1.2rem;
+  color: var(--color-acento);
+  margin-bottom: 1.5rem;
+}
+
+.btn-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Ocultar/mostrar contenido (TASK 5) */
+.oculto {
+  display: none;
+}
+
+#contenido-extra {
+  margin-top: 1.5rem;
+  background-color: var(--color-gris);
+  border-left: 4px solid var(--color-acento);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radio);
+  font-size: 1rem;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+/* ============================================
+   GALERÍA (TASK 2 — escritorio: 3 columnas)
+   ============================================ */
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.grid-galeria img {
+  width: 100%;
+  max-width: 100%;    /* TASK 3 */
+  height: auto;
+  border-radius: var(--radio);
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.3s, filter 0.3s;
+  filter: grayscale(30%);
+}
+
+.grid-galeria img:hover {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  border-top: 2px solid var(--color-primario);
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ============================================
+   MEDIA QUERY — TABLETS (TASK 2)
+   ============================================ */
+@media (max-width: 768px) {
+  .hero h1     { font-size: 3.5rem; }
+  .hero h1 span { font-size: 4rem; }
+
+  /* 2 columnas para bandas y galería en tablet */
+  .grid-bandas  { grid-template-columns: repeat(2, 1fr); }
+  .grid-galeria { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ============================================
+   MEDIA QUERY — MÓVILES (TASK 2)
+   ============================================ */
+@media (max-width: 480px) {
+  .hero h1      { font-size: 2.5rem; }
+  .hero h1 span { font-size: 3rem; }
+
+  /* Menú en columna */
+  .navbar       { flex-direction: column; gap: 1rem; }
+  .nav-links    { flex-direction: column; align-items: center; gap: 0.5rem; }
+
+  /* 1 columna para proyectos/bandas */
+  .grid-bandas  { grid-template-columns: 1fr; }
+
+  /* 2 columnas para galería en móvil */
+  .grid-galeria { grid-template-columns: repeat(2, 1fr); }
+
+  .btn-grupo    { flex-direction: column; align-items: center; }
+}
